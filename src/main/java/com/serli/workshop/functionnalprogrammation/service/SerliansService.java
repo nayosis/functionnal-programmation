@@ -1,71 +1,61 @@
 package com.serli.workshop.functionnalprogrammation.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serli.workshop.functionnalprogrammation.dto.Evenement;
 import com.serli.workshop.functionnalprogrammation.dto.Serlian;
-import org.springframework.util.ResourceUtils;
+import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class SerliansService {
 
-    final ObjectMapper mapper;
+    private final SerliansRepository repository;
 
-    public SerliansService(ObjectMapper mapper) {
-        this.mapper = mapper;
+    public SerliansService(SerliansRepository repository) {
+        this.repository = repository;
     }
 
     public List<Serlian> getSerlians(){
-        getDataSerlian();
+        repository.getDataSerlian();
         // TODO
         return null;
     }
 
     public Optional<Serlian> getSerlianById(String id){
-        getDataSerlian();
+        repository.getDataSerlian();
         // TODO
         return null;
     }
 
     public Optional<Serlian> getSerlianByName(String name){
-        getDataSerlian();
+        repository.getDataSerlian();
         // TODO
         return null;
     }
 
     public List<Serlian> getSerlianOrdorerByPrenom(){
-        getDataSerlian();
+        repository.getDataSerlian();
         // TODO
         return null;
     }
 
     public List<String> getDisctinctRole(){
-        getDataSerlian();
+        repository.getDataSerlian();
         // TODO
         return null;
     }
 
     public List<String> getSerlienByRole(String role){
-        getDataSerlian();
+        repository.getDataSerlian();
         // TODO
         return null;
     }
 
     public List<Evenement> getEventbySerlien(String id){
-        getDataSerlian();
+        repository.getDataSerlian();
         // TODO
         return null;
-    }
-
-    private List<Serlian> getDataSerlian(){
-        List<Serlian> serlians = new ArrayList<>();
-        try {
-            serlians = mapper.readValue(ResourceUtils.getFile("classpath:serlians.json"), mapper.getTypeFactory().constructCollectionType(List.class, Serlian.class));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return serlians;
     }
 }

@@ -1,6 +1,7 @@
 package com.serli.workshop.functionnalprogrammation;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
 import com.serli.workshop.functionnalprogrammation.service.SerliansService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +14,4 @@ public class FunctionnalProgrammationApplication {
         SpringApplication.run(FunctionnalProgrammationApplication.class, args);
     }
 
-
-    @Bean
-    public SerliansService getSerliansService(){
-        ObjectMapper mapper = new ObjectMapper();
-        return new SerliansService(mapper);
-    }
 }
