@@ -1,0 +1,448 @@
+[
+  {
+    "id": "8f8706f7-dcda-4d0b-b148-50dd95cb7fbb",
+    "nom": "Dorovic",
+    "prenom": "Mathieu",
+    "email": "mathieu.dorovic@serli.com",
+    "roles": ["dev", "formateur", "speaker"],
+    "twitter": "plimo",
+    "recompenses": ["devoxx", "breizhCamp"],
+    "competences": [
+      "64cf7f19-8d43-444b-8d4a-5ed6a93e1d67",
+      "0c97c603-8791-486b-b2eb-03e2af7f3a5d",
+      "afccf044-ead2-400d-82a7-773e9154d2f3",
+      "0de5489e-3969-4a78-9e5a-4fa9e7a894fc",
+      "14fc2bdb-3605-4fd9-80f9-ddcfb904cc88",
+      "1a22d126-b82a-4866-9fe6-f9a5dd43213b",
+      "ace1430d-300b-4c91-9efb-b3b84008029a",
+      "cbeb9b3c-13b9-420c-a3af-b1bebe9b4932",
+      "985d08a3-1a6a-4487-93cf-d8f279ee2929",
+      "869c9bd2-6a75-49f9-9ac9-acf0946dba07"
+    ],
+    "evenements": [
+      {
+        "id": "634ef2b3-15ef-4c3a-b760-d5eaae585e04",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2011-01-23"
+      },
+      {
+        "id": "5cd3d3c1-aa21-43f5-acc8-6c930e01a24a",
+        "text": "",
+        "type": "MISSION_BEGIN",
+        "nom": "macif.fr",
+        "client": "MACIF",
+        "date": "2018-01-09"
+      },
+      {
+        "id": "2115e1de-3bd7-4e77-aa23-4c0a1697a2c9",
+        "text": "Speaker @t DevOXX",
+        "type": "CONF_SPEAKER",
+        "nom": "",
+        "client": "",
+        "date": "2017-04-21"
+      },
+      {
+        "id": "199411c7-4043-420c-bd9d-87f60a345974",
+        "text": "",
+        "type": "MISSION_END",
+        "nom": "macif.fr",
+        "client": "MACIF",
+        "date": "2018-12-06"
+      }
+    ]
+  },
+  {
+    "id": "7b673bd6-4b79-4338-bc87-7987bd971c4f",
+    "nom": "Jravix",
+    "prenom": "Lenn",
+    "email": "",
+    "roles": ["dev", "unknow"],
+    "twitter": "@Lenn",
+    "competences": [
+      "64cf7f19-8d43-444b-8d4a-5ed6a93e1d67",
+      "0c97c603-8791-486b-b2eb-03e2af7f3a5d",
+      "afccf044-ead2-400d-82a7-773e9154d2f3",
+      "0de5489e-3969-4a78-9e5a-4fa9e7a894fc",
+      "ace1430d-300b-4c91-9efb-b3b84008029a",
+      "cbeb9b3c-13b9-420c-a3af-b1bebe9b4932",
+      "985d08a3-1a6a-4487-93cf-d8f279ee2929",
+      "869c9bd2-6a75-49f9-9ac9-acf0946dba07"
+    ],
+    "evenements": [
+      {
+        "id": "8a64afb4-7508-45fd-8333-2771029098c3",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "15f73b9c-2f37-4953-ad06-e87cf1745f28",
+    "nom": "Lutimo",
+    "prenom": "Etienne",
+    "email": "etienne.lutimo@serli.com",
+    "roles": ["dev"],
+    "twitter": "@Etie",
+    "competences": [
+      "64cf7f19-8d43-444b-8d4a-5ed6a93e1d67",
+      "0c97c603-8791-486b-b2eb-03e2af7f3a5d",
+      "afccf044-ead2-400d-82a7-773e9154d2f3",
+      "0de5489e-3969-4a78-9e5a-4fa9e7a894fc",
+      "14fc2bdb-3605-4fd9-80f9-ddcfb904cc88",
+      "1a22d126-b82a-4866-9fe6-f9a5dd43213b",
+      "ace1430d-300b-4c91-9efb-b3b84008029a"
+    ],
+    "evenements": [
+      {
+        "id": "585a2a18-6360-41e5-8af0-e2b111e57740",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "da4b7b44-b90d-47ff-88a3-067a5d8be51d",
+    "nom": "Assimano",
+    "prenom": "David",
+    "email": "david.assimano@serli.com",
+    "roles": ["dev", "formateur"],
+    "twitter": "@Davi",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "f070924d-8444-4221-af7c-77fb1973c3e8",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "b5b82446-9885-49e2-9304-3fb1b21d5b42",
+    "nom": "Garibaldi",
+    "prenom": "Vincent",
+    "email": "vincent.garibaldi@serli.com",
+    "roles": ["dev", "tuteur"],
+    "twitter": "Nayosis",
+    "recompenses": ["JugSummerCamp", "breizhCamp"],
+    "competences": [ "1a22d126-b82a-4866-9fe6-f9a5dd43213b",
+      "ace1430d-300b-4c91-9efb-b3b84008029a",
+      "cbeb9b3c-13b9-420c-a3af-b1bebe9b4932"],
+    "evenements": [
+      {
+        "id": "",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2017-01-16"
+      },
+      {
+        "id": "",
+        "text": "",
+        "type": "MISSION_BEGIN",
+        "nom": "Macif.fr",
+        "client": "Macif",
+        "date": "2017-02-12"
+      },
+      {
+        "id": "0bfa961d-4f85-4248-a89d-0d6d01be0802",
+        "text": "Present @t JugSummerCamp",
+        "type": "CONF_PARTICIPER",
+        "nom": "",
+        "client": "",
+        "date": "2017-09-15"
+      },
+      {
+        "id": "dd83b7de-7421-45cf-8145-67e845679818",
+        "text": "Present @t JugSummerCamp",
+        "type": "CONF_PARTICIPER",
+        "nom": "",
+        "client": "",
+        "date": "2018-09-15"
+      },
+      {
+        "id": "be8dfbf8-5b4f-47e6-8b70-b5449c398776",
+        "text": "Present @t BreizhCamp",
+        "type": "CONF_PARTICIPER",
+        "nom": "",
+        "client": "",
+        "date": "2019-04-22"
+      },
+      {
+        "id": "",
+        "text": "",
+        "type": "MISSION_END",
+        "nom": "Macif.fr",
+        "client": "Macif",
+        "date": "2010-04-11"
+      }
+    ]
+  },
+  {
+    "id": "59f83880-6f1b-440a-a99e-38bb7bdbf5d4",
+    "nom": "Vinaso",
+    "prenom": "Manel",
+    "email": "",
+    "roles": ["president"],
+    "twitter": "@Mane",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "31859678-eb7e-4353-8605-5434b8af80ee",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "8339838e-e848-4daa-9e56-39ad7a004e02",
+    "nom": "Bandela",
+    "prenom": "Karim",
+    "email": "",
+    "roles": ["dev", "tuteur", "formateur"],
+    "twitter": "@Kari",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "fc01aa5a-517d-4efa-982e-ccc7298dbeb4",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "75715460-3f74-4ab2-b8d7-faec1d23ce41",
+    "nom": "Unami",
+    "prenom": "Canelle",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "57df8b1d-47a7-431f-a965-8a79792ab3cf",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "28661b86-8d17-4228-bc34-2751c4dca2a9",
+    "nom": "Fer",
+    "prenom": "Cédric",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "60b99e47-f523-41fc-9949-cd34a02cebf3",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      },
+      {
+        "id": "60b99e47-f523-41fc-9949-cd34a02cebf3",
+        "text": "Bye ",
+        "type": "DEMISSION",
+        "nom": "",
+        "client": "",
+        "date": "2019-01-06"
+      }
+    ]
+  },
+  {
+    "id": "6a85b0c4-632e-44ba-8e7f-94a9a624e419",
+    "nom": "Gato",
+    "prenom": "Damien",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Dami",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "6de9dade-e12a-444d-b893-7ecb53c24ad2",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "f8c646d9-acd3-4ebd-a030-9fb6821e6151",
+    "nom": "Freminato",
+    "prenom": "Valentin",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Vale",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "3873fb98-c613-4d17-b104-4b22c79c187f",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "8ba00e17-3033-48cf-9821-01706ff74ad7",
+    "nom": "Frineta",
+    "prenom": "Diego",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Dieg",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "444840dc-6ae2-4adc-bd8a-2f72ab417894",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "b4f4e9ba-0f6c-420d-a741-5d0253ee0802",
+    "nom": "Gui",
+    "prenom": "Frédérique",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Fréd",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "0a85a046-47a1-4ece-8d91-1e5b5db50d53",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "b0de3a57-9541-40e2-b439-ae7e5a3ac9bb",
+    "nom": "Menou",
+    "prenom": "Nada",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Nada",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "f1ab6c0d-ddd4-4432-b490-0f66182a83be",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "ee214323-7219-49de-a2f8-6cc2503aceda",
+    "nom": "Archer",
+    "prenom": "Anne",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Anne",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "50debf5f-0d84-4162-9363-db2577e9a21b",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "40fe6f92-dca5-4812-8c99-33e21f73a8f1",
+    "nom": "Pililou",
+    "prenom": "Mehdi ",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Mehd",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "bc391670-0f22-47f3-ad2f-e7265d061fae",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "55367b94-b12c-45ed-bd5b-c1831719466c",
+    "nom": "Romina",
+    "prenom": "Marie",
+    "email": "",
+    "roles": ["support"],
+    "twitter": "@Mari",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "2ae8bb03-ea9b-4a01-8932-a8b24e080e0a",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  },
+  {
+    "id": "139b3cff-8e2c-428c-88d8-b8582dcac015",
+    "nom": "Jouyo",
+    "prenom": "Tanguy",
+    "email": "",
+    "roles": ["dev"],
+    "twitter": "@Tang",
+    "competences": [],
+    "evenements": [
+      {
+        "id": "5b7fdd43-4552-4713-99a8-449358151b41",
+        "text": "Welcome to Serli",
+        "type": "EMBAUCHE",
+        "nom": "",
+        "client": "",
+        "date": "2018-01-06"
+      }
+    ]
+  }
+]
