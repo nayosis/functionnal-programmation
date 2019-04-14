@@ -21,6 +21,7 @@ public class SerliansRepository {
     }
 
     public List<Serlian> getDataSerlian() {
+        // TODO use try to handle error
         List<Serlian> serlians = new ArrayList<>();
         try {
             serlians = mapper.readValue(serliansFile, mapper.getTypeFactory().constructCollectionType(List.class, Serlian.class));
