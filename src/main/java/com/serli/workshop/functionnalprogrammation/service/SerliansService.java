@@ -41,7 +41,7 @@ public class SerliansService {
         return null;
     }
 
-    public List<String> getDisctinctRole(){
+    public List<String> getDistinctRole(){
         repository.getDataSerlian();
         // TODO
         return null;
