@@ -6,7 +6,6 @@ import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
@@ -54,5 +53,13 @@ public class SerliansServiceTest {
         assertThat(serlianById).isEmpty();
     }
 
+    @Ignore
+    @Test
+    public void shouldGetRoles() {
+        List<String> roles = service.getDistinctRoles();
+        assertThat(roles).contains(
+                "dev", "formateur", "speaker", "unknow", "tuteur", "president", "support"
+        );
+    }
 
 }

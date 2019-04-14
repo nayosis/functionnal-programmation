@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class SerliansService {
@@ -18,9 +19,9 @@ public class SerliansService {
     }
 
     public List<Serlian> getSerlians(){
-        repository.getDataSerlian();
+        return repository.getDataSerlian();
         // TODO
-        return null;
+        //return null;
     }
 
     public Optional<Serlian> getSerlianById(String id){
@@ -41,7 +42,7 @@ public class SerliansService {
         return null;
     }
 
-    public List<String> getDistinctRole(){
+    public List<String> getDistinctRoles(){
         repository.getDataSerlian();
         // TODO
         return null;
