@@ -3,6 +3,7 @@ package com.serli.workshop.functionnalprogrammation.service;
 import com.serli.workshop.functionnalprogrammation.dto.Evenement;
 import com.serli.workshop.functionnalprogrammation.dto.Serlian;
 import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
+import io.vavr.collection.Map;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -55,6 +56,12 @@ public class SerliansService {
     }
 
     public List<Evenement> getEventbySerlien(String id){
+        repository.getDataSerlian();
+        // TODO
+        return null;
+    }
+
+    public Map<String, Integer> getSerlianEventHistogram() {
         repository.getDataSerlian();
         // TODO
         return null;

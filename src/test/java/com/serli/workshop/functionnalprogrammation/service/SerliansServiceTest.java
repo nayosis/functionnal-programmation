@@ -3,6 +3,10 @@ package com.serli.workshop.functionnalprogrammation.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serli.workshop.functionnalprogrammation.dto.Serlian;
 import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
+import io.vavr.Tuple;
+import io.vavr.Tuple2;
+import io.vavr.collection.Map;
+import io.vavr.collection.Seq;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -10,8 +14,11 @@ import org.springframework.util.ResourceUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -62,4 +69,18 @@ public class SerliansServiceTest {
         );
     }
 
+    @Ignore
+    @Test
+    public void shouldGetEventHistogram() {
+        Map<String, Integer> histogram = service.getSerlianEventHistogram();
+
+        assertThat(histogram).contains(
+                Tuple.of("EMBAUCHE", 18),
+                Tuple.of("MISSION_BEGIN", 2),
+                Tuple.of("CONF_SPEAKER", 1),
+                Tuple.of("MISSION_END", 2),
+                Tuple.of("CONF_PARTICIPER", 3),
+                Tuple.of("DEMISSION", 1)
+        );
+    }
 }
