@@ -6,7 +6,11 @@ import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.ResourceUtils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,8 +21,13 @@ public class SerliansServiceTest {
     private SerliansService service;
 
     @Before
-    public void setUp() {
-        SerliansRepository repository = new SerliansRepository(new ObjectMapper());
+    public void setUp() throws FileNotFoundException {
+        File file = ResourceUtils.getFile("classpath:serlians.json");
+
+        SerliansRepository repository = new SerliansRepository(
+                file,
+                new ObjectMapper()
+        );
         service = new SerliansService(repository);
     }
 

@@ -6,6 +6,9 @@ import com.serli.workshop.functionnalprogrammation.service.SerliansService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.util.ResourceUtils;
+
+import java.io.FileNotFoundException;
 
 @SpringBootApplication
 public class FunctionnalProgrammationApplication {
@@ -14,4 +17,12 @@ public class FunctionnalProgrammationApplication {
         SpringApplication.run(FunctionnalProgrammationApplication.class, args);
     }
 
+    @Bean
+    SerliansRepository repository(ObjectMapper objectMapper) throws FileNotFoundException {
+        return new SerliansRepository(
+                ResourceUtils.getFile("classpath:data.json"),
+                objectMapper
+        );
+    }
+    
 }
