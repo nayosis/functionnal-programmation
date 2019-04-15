@@ -38,7 +38,7 @@ public class SerliansServiceTest {
     @Before
     public void setUp() throws FileNotFoundException {
         File file = ResourceUtils.getFile("classpath:data.json");
-        
+
         repository = new SerliansRepository(file, mapper);
         service = new SerliansService(repository);
     }
@@ -147,11 +147,11 @@ public class SerliansServiceTest {
         Map<String, Integer> histogram = service.getSerlianEventHistogram();
 
         assertThat(histogram).contains(
+                Tuple.of("Formation", 117),
                 Tuple.of("naissance enfant", 128),
                 Tuple.of("Mission", 106),
                 Tuple.of("Conf", 122),
-                Tuple.of("Support", 169),
-                Tuple.of("Formation", 117)
+                Tuple.of("Support", 122)
         );
     }
 }
