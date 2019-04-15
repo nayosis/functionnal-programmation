@@ -2,6 +2,7 @@ package com.serli.workshop.functionnalprogrammation.dto;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 public class Serlian implements Serializable {
 
@@ -86,5 +87,41 @@ public class Serlian implements Serializable {
 
     public void setCompetences(List<String> competences) {
         this.competences = competences;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Serlian)) return false;
+        Serlian serlian = (Serlian) o;
+        return Objects.equals(id, serlian.id) &&
+                Objects.equals(nom, serlian.nom) &&
+                Objects.equals(prenom, serlian.prenom) &&
+                Objects.equals(email, serlian.email) &&
+                Objects.equals(roles, serlian.roles) &&
+                Objects.equals(recompenses, serlian.recompenses) &&
+                Objects.equals(competences, serlian.competences) &&
+                Objects.equals(evenements, serlian.evenements) &&
+                Objects.equals(twitter, serlian.twitter);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nom, prenom, email, roles, recompenses, competences, evenements, twitter);
+    }
+
+    @Override
+    public String toString() {
+        return "Serlian{" +
+                "id='" + id + '\'' +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", email='" + email + '\'' +
+                ", roles=" + roles +
+                ", recompenses=" + recompenses +
+                ", competences=" + competences +
+                ", evenements=" + evenements +
+                ", twitter='" + twitter + '\'' +
+                '}';
     }
 }
