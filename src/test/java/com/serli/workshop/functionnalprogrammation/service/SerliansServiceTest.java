@@ -146,12 +146,11 @@ public class SerliansServiceTest {
         Map<String, Integer> histogram = service.getSerlianEventHistogram();
 
         assertThat(histogram).contains(
-                Tuple.of("EMBAUCHE", 18),
-                Tuple.of("MISSION_BEGIN", 2),
-                Tuple.of("CONF_SPEAKER", 1),
-                Tuple.of("MISSION_END", 2),
-                Tuple.of("CONF_PARTICIPER", 3),
-                Tuple.of("DEMISSION", 1)
+                Tuple.of("naissance enfant", 128),
+                Tuple.of("Mission", 106),
+                Tuple.of("Conf", 122),
+                Tuple.of("Support", 169),
+                Tuple.of("Formation", 117)
         );
     }
 }

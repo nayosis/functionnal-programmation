@@ -26,7 +26,7 @@ public class SerliansRepository {
         try {
             serlians = mapper.readValue(serliansFile, mapper.getTypeFactory().constructCollectionType(List.class, Serlian.class));
         } catch (Exception e) {
-            logger.error("Could not load serlians from serlians.json", e);
+            logger.error("Could not load serlians from data.json", e);
         }
         return serlians;
     }
