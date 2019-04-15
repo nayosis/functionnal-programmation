@@ -3,12 +3,14 @@ package com.serli.workshop.functionnalprogrammation.service;
 import com.serli.workshop.functionnalprogrammation.dto.Evenement;
 import com.serli.workshop.functionnalprogrammation.dto.Serlian;
 import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
-import io.vavr.collection.Map;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import static java.util.function.Function.identity;
 
 @Service
 public class SerliansService {
@@ -26,9 +28,9 @@ public class SerliansService {
     }
 
     public Optional<Serlian> getSerlianById(String id){
-        repository.getDataSerlian();
+        return repository.getDataSerlian().stream().filter(serlian -> id.equals(serlian.getId())).findFirst();
         // TODO
-        return null;
+        //return null;
     }
 
     public Optional<Serlian> getSerlianByName(String name){
@@ -43,33 +45,35 @@ public class SerliansService {
     //  higher order functions
 
     public List<Serlian> getSerlianOrdorerByPrenom(){
-        repository.getDataSerlian();
+        return repository.getDataSerlian().stream().sorted(Comparator.comparing(Serlian::getPrenom)).collect(Collectors.toList());
         // TODO
-        return null;
     }
 
     public List<String> getDistinctRoles(){
-        repository.getDataSerlian();
+        return repository.getDataSerlian().stream().flatMap(serlian -> serlian.getRoles().stream()).distinct().collect(Collectors.toList());
         // TODO
-        return null;
     }
 
-    public List<String> getSerlienByRole(String role){
-        repository.getDataSerlian();
+    public List<Serlian> getSerlienByRole(String role){
+        return repository.getDataSerlian().stream().filter(serlian -> serlian.getRoles().contains(role)).collect(Collectors.toList());
         // TODO
-        return null;
     }
 
     public List<Evenement> getEventbySerlien(String id){
-        repository.getDataSerlian();
-        // TODO
-        return null;
+        return getSerlianById(id).map(Serlian::getEvenements).orElseThrow(()-> new IllegalStateException("aucun serlien a ce numero"));
+        // TODO With a either ??
     }
 
-    public Map<String, Integer> getSerlianEventHistogram() {
-        repository.getDataSerlian();
+    public java.util.Map<String, Integer> getSerlianEventHistogram() {
+        java.util.Map<String, Integer> histogram = repository.getDataSerlian().stream()
+                .flatMap(serlain -> serlain.getEvenements().stream())
+                .collect(Collectors.groupingBy(
+                        event -> event.getType(),
+                        Collectors.mapping(event -> 1, Collectors.summingInt(entier -> (int) entier))
+                ));
+
         // TODO
-        return null;
+        return histogram;
     }
 
     public void addSerlian(Serlian serlian) {
