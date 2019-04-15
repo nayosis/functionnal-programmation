@@ -1,6 +1,7 @@
 package com.serli.workshop.functionnalprogrammation.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.serli.workshop.functionnalprogrammation.dto.Evenement;
 import com.serli.workshop.functionnalprogrammation.dto.Serlian;
 import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
 import io.vavr.Tuple;
@@ -19,10 +20,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -84,6 +82,60 @@ public class SerliansServiceTest {
         );
     }
 
+
+    @Ignore
+     @Test
+    public void shouldOrdored() {
+        List<Serlian> serlians =  service.getSerlianOrdorerByPrenom();
+        assertThat(serlians).isSortedAccordingTo(Comparator.comparing(Serlian::getPrenom));
+    }
+
+    @Ignore
+    @Test
+public void shouldGetSerlianByRole() {
+
+    List<Serlian> serlians =  service.getSerlienByRole("Dev");
+    assertThat(serlians).hasSize(51);
+
+}
+
+    @Ignore
+    @Test
+public void shouldGetEventByIdSerlian (){
+    List<Evenement> eventbySerlien = service.getEventbySerlien("193cca81-3cee-4866-89ee-82f7f06a24d2");
+
+    assertThat(eventbySerlien).hasSize(1);
+
+}
+
+    @Ignore
+    @Test
+    public void shouldGetErrorWithEventByIdSerlian (){
+
+        assertThatCode(() -> service.getEventbySerlien("pasdetrouvation")).hasMessage("aucun serlien a ce numero");
+
+    }
+
+
+
+    /**
+     * Work with fold, Tuple
+     */
+
+    @Ignore
+    @Test
+    public void shouldGetEventHistogram() {
+        java.util.Map<String, Integer> histogram = service.getSerlianEventHistogram();
+        assertThat(histogram).contains( entry("naissance enfant", 128),
+                entry("Mission", 106),
+                entry("Conf", 122),
+                entry("Support", 122),
+                entry("Formation", 117));
+    }
+
+
+
+
     /**
      * Work with Eithers.
      */
@@ -134,24 +186,9 @@ public class SerliansServiceTest {
         serlian.setId("should-not-be-found");
 
         assertThatCode(() -> service.updateSerlian(serlian))
-            .hasMessage("Serlian 'should-not-be-found' does not exists.");
+                .hasMessage("Serlian 'should-not-be-found' does not exists.");
     }
 
-    /**
-     * Work with fold, Tuple
-     */
 
-    @Ignore
-    @Test
-    public void shouldGetEventHistogram() {
-        Map<String, Integer> histogram = service.getSerlianEventHistogram();
 
-        assertThat(histogram).contains(
-                Tuple.of("naissance enfant", 128),
-                Tuple.of("Mission", 106),
-                Tuple.of("Conf", 122),
-                Tuple.of("Support", 169),
-                Tuple.of("Formation", 117)
-        );
-    }
 }
