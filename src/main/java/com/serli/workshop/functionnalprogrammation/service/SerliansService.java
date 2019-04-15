@@ -37,6 +37,11 @@ public class SerliansService {
         return null;
     }
 
+    // TODO refactor getSerlianById & getSerlianByName to use
+    //  pure functions
+    //  &
+    //  higher order functions
+
     public List<Serlian> getSerlianOrdorerByPrenom(){
         repository.getDataSerlian();
         // TODO
@@ -63,6 +68,15 @@ public class SerliansService {
 
     public Map<String, Integer> getSerlianEventHistogram() {
         repository.getDataSerlian();
+        // TODO
+        return null;
+    }
+
+    public void addSerlian(Serlian serlian) {
+        // TODO
+    }
+
+    public Serlian updateSerlian(Serlian serlian) {
         // TODO
         return null;
     }

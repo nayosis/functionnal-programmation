@@ -1,0 +1,55 @@
+{
+  "id": "8f8706f7-dcda-4d0b-b148-50dd95cb7fbb",
+  "nom": "Dorovic",
+  "prenom": "Mathieu",
+  "email": "mathieu.dorovic@serli.com",
+  "roles": ["dev", "formateur", "speaker"],
+  "twitter": "plimo",
+  "recompenses": ["devoxx", "breizhCamp"],
+  "competences": [
+    "64cf7f19-8d43-444b-8d4a-5ed6a93e1d67",
+    "0c97c603-8791-486b-b2eb-03e2af7f3a5d",
+    "afccf044-ead2-400d-82a7-773e9154d2f3",
+    "0de5489e-3969-4a78-9e5a-4fa9e7a894fc",
+    "14fc2bdb-3605-4fd9-80f9-ddcfb904cc88",
+    "1a22d126-b82a-4866-9fe6-f9a5dd43213b",
+    "ace1430d-300b-4c91-9efb-b3b84008029a",
+    "cbeb9b3c-13b9-420c-a3af-b1bebe9b4932",
+    "985d08a3-1a6a-4487-93cf-d8f279ee2929",
+    "869c9bd2-6a75-49f9-9ac9-acf0946dba07"
+  ],
+  "evenements": [
+    {
+      "id": "634ef2b3-15ef-4c3a-b760-d5eaae585e04",
+      "text": "Welcome to Serli",
+      "type": "EMBAUCHE",
+      "nom": "",
+      "client": "",
+      "date": "2011-01-23"
+    },
+    {
+      "id": "5cd3d3c1-aa21-43f5-acc8-6c930e01a24a",
+      "text": "",
+      "type": "MISSION_BEGIN",
+      "nom": "macif.fr",
+      "client": "MACIF",
+      "date": "2018-01-09"
+    },
+    {
+      "id": "2115e1de-3bd7-4e77-aa23-4c0a1697a2c9",
+      "text": "Speaker @t DevOXX",
+      "type": "CONF_SPEAKER",
+      "nom": "",
+      "client": "",
+      "date": "2017-04-21"
+    },
+    {
+      "id": "199411c7-4043-420c-bd9d-87f60a345974",
+      "text": "",
+      "type": "MISSION_END",
+      "nom": "macif.fr",
+      "client": "MACIF",
+      "date": "2018-12-06"
+    }
+  ]
+}
