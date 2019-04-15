@@ -32,13 +32,14 @@ import static org.assertj.core.api.Assertions.*;
 public class SerliansServiceTest {
 
     private static final ObjectMapper mapper = new ObjectMapper();
+    private SerliansRepository repository;
     private SerliansService service;
 
     @Before
     public void setUp() throws FileNotFoundException {
         File file = ResourceUtils.getFile("classpath:data.json");
-
-        SerliansRepository repository = new SerliansRepository(file, mapper);
+        
+        repository = new SerliansRepository(file, mapper);
         service = new SerliansService(repository);
     }
 
