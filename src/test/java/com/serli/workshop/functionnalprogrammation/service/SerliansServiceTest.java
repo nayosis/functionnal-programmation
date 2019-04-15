@@ -36,7 +36,7 @@ public class SerliansServiceTest {
     @Before
     public void setUp() throws FileNotFoundException {
         File file = ResourceUtils.getFile("classpath:data.json");
-        
+
         repository = new SerliansRepository(file, mapper);
         service = new SerliansService(repository);
     }
