@@ -36,13 +36,10 @@ public class SerliansServiceTest {
 
     @Before
     public void setUp() throws FileNotFoundException {
-        File file = ResourceUtils.getFile("classpath:serlians.json");
+        File file = ResourceUtils.getFile("classpath:data.json");
 
         SerliansRepository repository = new SerliansRepository(file, mapper);
         service = new SerliansService(repository);
-
-
-
     }
 
     /**
@@ -80,8 +77,9 @@ public class SerliansServiceTest {
     @Test
     public void shouldGetRoles() {
         List<String> roles = service.getDistinctRoles();
-        assertThat(roles).contains(
-                "dev", "formateur", "speaker", "unknow", "tuteur", "president", "support"
+
+        assertThat(roles).containsOnly(
+                "Unknow", "Formateur", "Dev", "Support", "Tuteur", "President"
         );
     }
 

@@ -20,9 +20,9 @@ public class SerliansService {
     }
 
     public List<Serlian> getSerlians(){
-        return repository.getDataSerlian();
+        repository.getDataSerlian();
         // TODO
-        //return null;
+        return null;
     }
 
     public Optional<Serlian> getSerlianById(String id){
