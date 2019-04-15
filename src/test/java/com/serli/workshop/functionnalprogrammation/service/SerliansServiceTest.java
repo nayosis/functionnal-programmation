@@ -104,11 +104,11 @@ public class SerliansServiceTest {
     @Test
     public void addSerlianInformationShouldFailWhenSerlianAlreadyExists() {
         Serlian serlian = new Serlian();
-        serlian.setNom("Dorovic");
-        serlian.setPrenom("Mathieu");
+        serlian.setNom("Denise");
+        serlian.setPrenom("Rodgers");
 
         assertThatCode(() -> service.addSerlian(serlian))
-                .hasMessage("Serlian Mathieu Dorovic already exists.");
+                .hasMessage("Serlian Denise Rodgers already exists.");
     }
 
     @Ignore
