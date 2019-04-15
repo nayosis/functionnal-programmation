@@ -4,11 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serli.workshop.functionnalprogrammation.dto.Evenement;
 import com.serli.workshop.functionnalprogrammation.dto.Serlian;
 import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
-import io.vavr.Tuple;
-import io.vavr.Tuple2;
-import io.vavr.collection.Map;
-import io.vavr.collection.Seq;
-import org.hibernate.validator.constraints.br.TituloEleitoral;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -20,10 +15,9 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -84,38 +78,37 @@ public class SerliansServiceTest {
 
 
     @Ignore
-     @Test
+    @Test
     public void shouldOrdored() {
-        List<Serlian> serlians =  service.getSerlianOrdorerByPrenom();
+        List<Serlian> serlians = service.getSerlianOrdorerByPrenom();
         assertThat(serlians).isSortedAccordingTo(Comparator.comparing(Serlian::getPrenom));
     }
 
     @Ignore
     @Test
-public void shouldGetSerlianByRole() {
+    public void shouldGetSerlianByRole() {
 
-    List<Serlian> serlians =  service.getSerlienByRole("Dev");
-    assertThat(serlians).hasSize(51);
+        List<Serlian> serlians = service.getSerlienByRole("Dev");
+        assertThat(serlians).hasSize(51);
 
-}
-
-    @Ignore
-    @Test
-public void shouldGetEventByIdSerlian (){
-    List<Evenement> eventbySerlien = service.getEventbySerlien("193cca81-3cee-4866-89ee-82f7f06a24d2");
-
-    assertThat(eventbySerlien).hasSize(1);
-
-}
+    }
 
     @Ignore
     @Test
-    public void shouldGetErrorWithEventByIdSerlian (){
+    public void shouldGetEventByIdSerlian() {
+        List<Evenement> eventbySerlien = service.getEventbySerlien("193cca81-3cee-4866-89ee-82f7f06a24d2");
+
+        assertThat(eventbySerlien).hasSize(1);
+
+    }
+
+    @Ignore
+    @Test
+    public void shouldGetErrorWithEventByIdSerlian() {
 
         assertThatCode(() -> service.getEventbySerlien("pasdetrouvation")).hasMessage("aucun serlien a ce numero");
 
     }
-
 
 
     /**
@@ -126,14 +119,12 @@ public void shouldGetEventByIdSerlian (){
     @Test
     public void shouldGetEventHistogram() {
         java.util.Map<String, Integer> histogram = service.getSerlianEventHistogram();
-        assertThat(histogram).contains( entry("naissance enfant", 128),
+        assertThat(histogram).contains(entry("naissance enfant", 128),
                 entry("Mission", 106),
                 entry("Conf", 122),
                 entry("Support", 122),
                 entry("Formation", 117));
     }
-
-
 
 
     /**
@@ -188,7 +179,6 @@ public void shouldGetEventByIdSerlian (){
         assertThatCode(() -> service.updateSerlian(serlian))
                 .hasMessage("Serlian 'should-not-be-found' does not exists.");
     }
-
 
 
 }

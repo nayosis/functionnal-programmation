@@ -3,12 +3,11 @@ package com.serli.workshop.functionnalprogrammation.service;
 import com.serli.workshop.functionnalprogrammation.dto.Evenement;
 import com.serli.workshop.functionnalprogrammation.dto.Serlian;
 import com.serli.workshop.functionnalprogrammation.repository.SerliansRepository;
-import io.vavr.collection.Map;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class SerliansService {
@@ -54,7 +53,7 @@ public class SerliansService {
         return null;
     }
 
-    public List<String> getSerlienByRole(String role){
+    public List<Serlian> getSerlienByRole(String role){
         repository.getDataSerlian();
         // TODO
         return null;
